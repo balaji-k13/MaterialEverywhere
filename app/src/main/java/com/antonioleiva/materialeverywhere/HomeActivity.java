@@ -30,7 +30,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 
 public class HomeActivity extends BaseActivity {
@@ -102,7 +102,7 @@ public class HomeActivity extends BaseActivity {
             view.setTag(imageUrl);
 
             ImageView image = (ImageView) view.findViewById(R.id.image);
-            Picasso.with(view.getContext())
+            Glide.with(view.getContext())
                     .load(imageUrl)
                     .into(image);
 
